@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Allfiles/Css/login.css' %}">
+    <link rel="icon" href="{% static '/img/vk logo.png' %}">
+</head>
+<body style="background: url({%static 'Allfiles/photo/slider-2.jpg'%}) no-repeat center center fixed; background-size: cover;">
+    <div class="shadow_wrap">
+        <div class="form_wrap">
+        <h3>login<img src="{% static 'Allfiles/photo/account.png' %}" alt="profile" width="50px"></h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+        </form>
+        <br>
+            <a href="/signup/" class="btn btn-link">signup</a>
+            <a href="/" class="btn btn-link">home</a> 
+    </div>
+    </div>   
+</body>
+</html>

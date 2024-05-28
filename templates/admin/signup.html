@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Allfiles/Css/login.css' %}">
+    <link rel="icon" href="{% static '/img/vk logo.png' %}">
+    <link rel="stylesheet" href="{%static 'Allfiles/Css/bootstrap.min.css'%}">
+</head>
+<body style="background: url({%static 'Allfiles/photo/slider-2.jpg'%}) no-repeat center center fixed; background-size: cover;">
+    <div class="shadow_wrap" style="margin-top: 0px;">
+        <div class="form_wrap">
+            <img src="{% static 'Allfiles/Photo/account.png' %}" alt="profile" width="50px">
+            <h3>Signup</h3>
+        <form method="POST">
+            {{sinform}}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+                </form>
+                <br>
+                <a href="/login/" class="btn btn-link">Login</a>
+                <a href="/" class="btn btn-link">Home</a>
+    </div>
+    </div>   
+</body>
+</html>
